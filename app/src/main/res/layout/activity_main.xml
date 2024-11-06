@@ -49,7 +49,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.437" />
+        app:layout_constraintVertical_bias="0.456" />
 
     <TextView
         android:id="@+id/tv_meses"
@@ -61,10 +61,10 @@
         android:textSize="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.014"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.579" />
+        app:layout_constraintVertical_bias="0.609" />
 
     <TextView
         android:id="@+id/tv_juros"
@@ -79,7 +79,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.732" />
+        app:layout_constraintVertical_bias="0.751" />
 
     <TextView
         android:id="@+id/tv_value_final"
@@ -128,17 +128,19 @@
         android:id="@+id/btn_reset"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/gray"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="6dp"
+        android:backgroundTint="@color/gray"
         android:text="limpar"
         android:textColor="@color/white"
         android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/btn_guide_line_center"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_juros"/>
+        app:layout_constraintTop_toBottomOf="@+id/tv_juros"
+        app:layout_constraintVertical_bias="0.669" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/btn_guide_line_center"
@@ -159,8 +161,74 @@
         android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/btn_guide_line_center"
-        app:layout_constraintTop_toBottomOf="@+id/tv_juros"  />
+        app:layout_constraintTop_toBottomOf="@+id/tv_juros"
+        app:layout_constraintVertical_bias="0.669" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_valor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        app:hintEnabled="false"
+        app:layout_constraintBottom_toTopOf="@+id/tv_meses"
+        app:layout_constraintEnd_toStartOf="@+id/btn_guide_line_center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_aporte">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_valor"
+            android:maxLength="8"
+            android:inputType="numberDecimal"
+            android:background="@drawable/rounded"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Inserir Valor $"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_meses"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        app:hintEnabled="false"
+        app:layout_constraintBottom_toTopOf="@+id/tv_juros"
+        app:layout_constraintEnd_toStartOf="@+id/btn_guide_line_center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_meses">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_meses"
+            android:maxLength="4"
+            android:inputType="numberDecimal"
+            android:background="@drawable/rounded"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Inserir Num Meses"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_juros"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        app:hintEnabled="false"
+        app:layout_constraintBottom_toTopOf="@id/btn_reset"
+        app:layout_constraintEnd_toStartOf="@+id/btn_guide_line_center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_juros">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_juros"
+            android:maxLength="5"
+            android:inputType="numberDecimal"
+            android:background="@drawable/rounded"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Inserir Juros "/>
+    </com.google.android.material.textfield.TextInputLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
