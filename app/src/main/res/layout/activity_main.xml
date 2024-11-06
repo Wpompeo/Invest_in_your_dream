@@ -46,10 +46,10 @@
         android:textSize="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.028"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.456" />
+        app:layout_constraintVertical_bias="0.396" />
 
     <TextView
         android:id="@+id/tv_meses"
@@ -61,10 +61,10 @@
         android:textSize="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.014"
+        app:layout_constraintHorizontal_bias="0.028"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.609" />
+        app:layout_constraintVertical_bias="0.53" />
 
     <TextView
         android:id="@+id/tv_juros"
@@ -76,10 +76,10 @@
         android:textSize="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.023"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.751" />
+        app:layout_constraintVertical_bias="0.664" />
 
     <TextView
         android:id="@+id/tv_value_final"
@@ -115,7 +115,7 @@
         android:layout_height="wrap_content"
         android:text="0.0"
         android:textColor="@color/green"
-        android:textSize="18dp"
+        android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -172,19 +172,19 @@
         android:layout_height="wrap_content"
         android:layout_margin="6dp"
         app:hintEnabled="false"
-        app:layout_constraintBottom_toTopOf="@+id/tv_meses"
         app:layout_constraintEnd_toStartOf="@+id/btn_guide_line_center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_aporte">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edt_valor"
+            android:drawableEnd="@drawable/cash"
             android:maxLength="8"
             android:inputType="numberDecimal"
             android:background="@drawable/rounded"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Inserir Valor $"
+            android:hint="Inserir Valor:"
             />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -194,19 +194,19 @@
         android:layout_height="wrap_content"
         android:layout_margin="6dp"
         app:hintEnabled="false"
-        app:layout_constraintBottom_toTopOf="@+id/tv_juros"
         app:layout_constraintEnd_toStartOf="@+id/btn_guide_line_center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_meses">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edt_meses"
+            android:drawableEnd="@drawable/month"
             android:maxLength="4"
             android:inputType="numberDecimal"
             android:background="@drawable/rounded"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Inserir Num Meses"/>
+            android:hint="Inserir Meses:"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -215,19 +215,20 @@
         android:layout_height="wrap_content"
         android:layout_margin="6dp"
         app:hintEnabled="false"
-        app:layout_constraintBottom_toTopOf="@id/btn_reset"
+
         app:layout_constraintEnd_toStartOf="@+id/btn_guide_line_center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_juros">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edt_juros"
+            android:drawableEnd="@drawable/percent"
             android:maxLength="5"
             android:inputType="numberDecimal"
             android:background="@drawable/rounded"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Inserir Juros "/>
+            android:hint="Inserir Juros: "/>
     </com.google.android.material.textfield.TextInputLayout>
 
 
